@@ -1,4 +1,4 @@
-# Gaia
+# Gaia [![Build Status](https://travis-ci.org/mozStingray/gaia.svg?branch=master)](https://travis-ci.org/mozStingray/gaia)
 
 Gaia is Mozilla's Phone UX for the Boot to Gecko (B2G) project.
 
