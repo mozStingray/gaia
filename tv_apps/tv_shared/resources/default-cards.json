@@ -1,12 +1,6 @@
 {
   "card_list": [
     {
-      "name": "Television",
-      "type": "Deck",
-      "deckClass": "tv",
-      "group": "tv"
-    },
-    {
       "name": "Apps",
       "type": "Deck",
       "deckClass": "application",
@@ -24,6 +18,7 @@
       "name": "Dashboard",
       "type": "Deck",
       "deckClass": "dashboard",
+      "manifestURL": "app://dashboard.gaiamobile.org/manifest.webapp",
       "group": "dashboard"
     }
   ]

@@ -19,7 +19,7 @@ requireApp('system/shared/test/unit/mocks/mock_settings_url.js');
 require('/shared/test/unit/mocks/mock_navigator_moz_set_message_handler.js');
 requireApp('system/shared/test/unit/mocks/mock_navigator_getdevicestorage.js');
 requireApp('system/shared/test/unit/mocks/mock_navigator_getdevicestorages.js');
-
+requireApp('system/js/browser.js');
 requireApp('system/js/accessibility.js');
 requireApp('system/js/accessibility_quicknav_menu.js');
 requireApp('system/js/activities.js');
@@ -234,32 +234,6 @@ suite('system/Bootstrap', function() {
       test('should be enabled', function() {
         assert.isTrue(MockNavigatorSettings.mSettings[setting]);
       });
-    });
-  });
-
-  suite('check for insane devices beeing cancelled', function() {
-    function createEvent(type) {
-      var evt = new CustomEvent(type, { bubbles: true, cancelable: true });
-      evt.pageX = evt.pageY = 0;
-      evt.touches = [{ pageX: 0, pageY: 0 }];
-      evt.changedTouches = [{ pageX: 0, pageY: 0 }];
-      return evt;
-    }
-
-    test('mousedown should be preventDefaulted', function() {
-      assert.ok(window.dispatchEvent(createEvent('mousedown')) === false);
-    });
-
-    test('mouseup should be preventDefaulted', function() {
-      assert.ok(window.dispatchEvent(createEvent('mouseup')) === false);
-    });
-
-    test('touchend should be preventDefaulted', function() {
-      assert.ok(window.dispatchEvent(createEvent('touchstart')) === false);
-    });
-
-    test('touchend should be preventDefaulted', function() {
-      assert.ok(window.dispatchEvent(createEvent('touchend')) === false);
     });
   });
 });

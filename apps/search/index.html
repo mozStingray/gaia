@@ -69,16 +69,9 @@
 
     <div id="search-results" class="hidden">
 
-      <div id="offline-message">
-        <span id="settings-connectivity"></span>
-        <span data-l10n-id="offline-message"></span>
-      </div>
-
       <section id="contacts" class="local" data-l10n-id="contacts"
                aria-label="Contacts"></section>
 
-      <div id="loading"><progress></progress></div>
- 
       <section id="icons-wrapper" class="apps" data-l10n-id="apps" aria-label="Apps">
         <gaia-grid cols="4" text-rows="3" id="icons"></gaia-grid>
       </section>
@@ -92,6 +85,10 @@
           <select id="suggestions-select"></select>
           <label for="suggestions-select" id="suggestions-provider"></label>
         </h2>
+        <div id="offline-message">
+          <span id="settings-connectivity"></span>
+          <span data-l10n-id="offline-message"></span>
+        </div>
         <div id="suggestions-notice-wrapper" hidden>
           <p data-l10n-id="suggestions-settings-notice"></p>
           <button id="suggestions-notice-confirm" data-l10n-id="ok"></button>
@@ -99,7 +96,7 @@
         <section id="suggestions"
                  class="suggestions" data-l10n-id="suggestions"
                  aria-label="Suggestions"></section>
-
+        <div class="loading"><progress></progress></div>
       </div>
     </div>
 
